@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Player
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 31ab2f7c3cb3f444aaa19f0a5b6c9684, type: 3}
+    - {fileID: 2800000, guid: 5ac81bf21eba22e46a48f4484276226e, type: 3}
+    - {fileID: 2800000, guid: b2035d3cec0284643ae1735db3633861, type: 3}
+    - {fileID: 2800000, guid: d777a7794b4a0b74b898f236cec6ff3b, type: 3}
+    - {fileID: 2800000, guid: 789c962cdd764e7439ed6b7b7fc749f3, type: 3}
+    - {fileID: 2800000, guid: 56c9b21d6789e0546baf6e8c3f7aa6c7, type: 3}
+    - {fileID: 2800000, guid: 7dcabff37cce8284bbd08f53b8d66fb9, type: 3}
+    - {fileID: 2800000, guid: 1a3ab9d18e0485b449ffb103164651da, type: 3}
+    - {fileID: 2800000, guid: 0b02ef21f093528438853ee067a50593, type: 3}
+    - {fileID: 2800000, guid: a9582b3219109e04e8ebccb50acfff6b, type: 3}
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 0b02ef21f093528438853ee067a50593, type: 3}
+  - {fileID: 21300000, guid: 1a3ab9d18e0485b449ffb103164651da, type: 3}
+  - {fileID: 21300000, guid: a9582b3219109e04e8ebccb50acfff6b, type: 3}
+  - {fileID: 21300000, guid: 5ac81bf21eba22e46a48f4484276226e, type: 3}
+  - {fileID: 21300000, guid: 7dcabff37cce8284bbd08f53b8d66fb9, type: 3}
+  - {fileID: 21300000, guid: d777a7794b4a0b74b898f236cec6ff3b, type: 3}
+  - {fileID: 21300000, guid: 789c962cdd764e7439ed6b7b7fc749f3, type: 3}
+  - {fileID: 21300000, guid: b2035d3cec0284643ae1735db3633861, type: 3}
+  - {fileID: 21300000, guid: 31ab2f7c3cb3f444aaa19f0a5b6c9684, type: 3}
+  - {fileID: 21300000, guid: 56c9b21d6789e0546baf6e8c3f7aa6c7, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - JK_P_Sword__Idle_008
+  - JK_P_Sword__Idle_007
+  - JK_P_Sword__Idle_009
+  - JK_P_Sword__Idle_001
+  - JK_P_Sword__Idle_006
+  - JK_P_Sword__Idle_003
+  - JK_P_Sword__Idle_004
+  - JK_P_Sword__Idle_002
+  - JK_P_Sword__Idle_000
+  - JK_P_Sword__Idle_005
+  m_Tag: Player
+  m_IsVariant: 0

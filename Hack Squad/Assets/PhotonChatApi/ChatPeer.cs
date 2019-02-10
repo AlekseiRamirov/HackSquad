@@ -178,7 +178,14 @@ namespace ExitGames.Client.Photon.Chat
                 }
             }
 
-            return this.OpCustom((byte)ChatOperationCode.Authenticate, opParameters, true, (byte)0, this.IsEncryptionAvailable);
+            SendOptions sendOptions = new SendOptions
+            {
+                Reliability = true,
+                Channel = 0,
+                Encrypt = this.IsEncryptionAvailable
+            };
+
+            return this.SendOperation(ChatOperationCode.Authenticate, opParameters, sendOptions);
         }
     }
 

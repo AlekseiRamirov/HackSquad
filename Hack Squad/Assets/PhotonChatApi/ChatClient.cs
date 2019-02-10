@@ -454,7 +454,7 @@ namespace ExitGames.Client.Photon.Chat
             {
                 parameters.Add(ChatParameterCode.WebFlags, (byte)0x1);
             }
-            return this.chatPeer.OpCustom((byte)ChatOperationCode.Publish, parameters, reliable);
+            return this.chatPeer.SendOperation(ChatOperationCode.Publish, parameters, new SendOptions { Reliability = reliable });
         }
 
         /// <summary>
@@ -516,7 +516,15 @@ namespace ExitGames.Client.Photon.Chat
             {
                 parameters.Add(ChatParameterCode.WebFlags, (byte)0x1);
             }
-            return this.chatPeer.OpCustom((byte)ChatOperationCode.SendPrivate, parameters, reliable, 0, encrypt);
+            
+            SendOptions sendOptions = new SendOptions
+            {
+                Reliability = reliable,
+                Channel = 0,
+                Encrypt = encrypt
+            };
+
+            return this.chatPeer.SendOperation(ChatOperationCode.SendPrivate, parameters, sendOptions);
         }
 
         /// <summary>Sets the user's status (pre-defined or custom) and an optional message.</summary>
@@ -558,7 +566,7 @@ namespace ExitGames.Client.Photon.Chat
             {
                 parameters[ChatParameterCode.Message] = message;
             }
-            return this.chatPeer.OpCustom(ChatOperationCode.UpdateStatus, parameters, true);
+            return this.chatPeer.SendOperation(ChatOperationCode.UpdateStatus, parameters, SendOptions.SendReliable);
         }
 
         /// <summary>Sets the user's status without changing your status-message.</summary>
@@ -653,7 +661,7 @@ namespace ExitGames.Client.Photon.Chat
                 {
                     { ChatParameterCode.Friends, friends },
                 };
-            return this.chatPeer.OpCustom(ChatOperationCode.AddFriends, parameters, true);
+            return this.chatPeer.SendOperation(ChatOperationCode.AddFriends, parameters, SendOptions.SendReliable);
         }
 
         /// <summary>
@@ -730,7 +738,7 @@ namespace ExitGames.Client.Photon.Chat
                 {
                     { ChatParameterCode.Friends, friends },
                 };
-            return this.chatPeer.OpCustom(ChatOperationCode.RemoveFriends, parameters, true);
+            return this.chatPeer.SendOperation(ChatOperationCode.RemoveFriends, parameters, SendOptions.SendReliable);
         }
 
         /// <summary>
@@ -937,7 +945,7 @@ namespace ExitGames.Client.Photon.Chat
                 opParameters.Add((byte)ChatParameterCode.HistoryLength, historyLength);
             }
 
-            return this.chatPeer.OpCustom(operation, opParameters, true);
+            return this.chatPeer.SendOperation(operation, opParameters, SendOptions.SendReliable);
         }
 
         private void HandlePrivateMessageEvent(EventData eventData)
@@ -1151,7 +1159,7 @@ namespace ExitGames.Client.Photon.Chat
                 else
                 {
                     Dictionary<byte, object> opParameters = new Dictionary<byte, object> { { (byte)ChatParameterCode.Secret, this.AuthValues.Token } };
-                    return this.chatPeer.OpCustom((byte)ChatOperationCode.Authenticate, opParameters, true);
+                    return this.chatPeer.SendOperation(ChatOperationCode.Authenticate, opParameters, SendOptions.SendReliable);
                 }
             }
             else

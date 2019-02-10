@@ -54,7 +54,7 @@ public class NetworkUI : Photon.PunBehaviour
                 quantityOfPlayers = options.MaxPlayers;
                 break;
         }
-        PhotonNetwork.JoinOrCreateRoom(roomNameInput.text, options, TypedLobby.Default);
+        PhotonNetwork.JoinOrCreateRoom(roomNameInput.text, options,TypedLobby.Default);
         print("Room creada con éxito!");
     }
 
@@ -135,11 +135,17 @@ public class NetworkUI : Photon.PunBehaviour
 
     }
 
+    public override void OnLeftRoom()
+    {
+        StartCoroutine(UpdatePlayersInRoom());
+    }
+
     /// <summary>
     /// Método por el cual se realiza un actualización de la lista de los jugadores presentes en la sala
     /// cada 3 segundos
     /// </summary>
     /// <returns>Una espera de 3 segundos entre actualización de lista de jugadores</returns>
+    [PunRPC]
     public IEnumerator UpdatePlayersInRoom()
     {
         TextMeshProUGUI componentNamePlayer;
@@ -167,7 +173,6 @@ public class NetworkUI : Photon.PunBehaviour
     /// <summary>
     /// Método por el cual se carga la escena Test al momento que se cumpla la cantidad de jugadores máx establecidos inicialmente.
     /// </summary>
-    /// <returns>Una espera de 3 segundos entre acción.</returns>
     public void LoadNewScene()
     {
         PhotonNetwork.LoadLevel("Test");
@@ -185,6 +190,7 @@ public class NetworkUI : Photon.PunBehaviour
         }       
     }
 
+    
 
 }
 

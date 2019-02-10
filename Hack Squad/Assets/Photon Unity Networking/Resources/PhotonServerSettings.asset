@@ -21,10 +21,10 @@ MonoBehaviour:
   ServerAddress: 
   ServerPort: 5055
   VoiceServerPort: 5055
-  JoinLobby: 1
+  JoinLobby: 0
   EnableLobbyStatistics: 0
   PunLogging: 2
-  NetworkLogging: 1
+  NetworkLogging: 5
   RunInBackground: 1
   RpcList:
   - Chat
@@ -42,4 +42,6 @@ MonoBehaviour:
   - RequestForPickupItems
   - RequestForPickupTimes
   - TaggedPlayer
+  - IncreasePlayersInLobby
+  - UpdatePlayersInRoom
   DisableAutoOpenWizard: 1

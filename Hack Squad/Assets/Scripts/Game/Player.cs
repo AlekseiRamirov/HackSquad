@@ -59,23 +59,23 @@ public class Player : MonoBehaviour {
     /// <returns>Las coordenadas x, y de la posición del carril selecionado</returns>
     public Vector2 TakeRail(int rail, int positionOfVector)
     {
-        Vector2 positionRail = new Vector2(0, 0);
+        Vector2 positionInRail = new Vector2(0, 0);
         switch (rail)
         {
             case 1:
-                positionRail = new Vector2(board.rail1.listOfPointsRail[positionOfVector].transform.position.x, board.rail1.listOfPointsRail[positionOfVector].transform.position.y);
+                positionInRail = new Vector2(board.rail1.listOfPointsRail[positionOfVector].transform.position.x, board.rail1.listOfPointsRail[positionOfVector].transform.position.y);
                 break;
             case 2:
-                positionRail = new Vector2(board.rail2.listOfPointsRail[positionOfVector].transform.position.x, board.rail2.listOfPointsRail[positionOfVector].transform.position.y);
+                positionInRail = new Vector2(board.rail2.listOfPointsRail[positionOfVector].transform.position.x, board.rail2.listOfPointsRail[positionOfVector].transform.position.y);
                 break;
             case 3:
-                positionRail = new Vector2(board.rail3.listOfPointsRail[positionOfVector].transform.position.x, board.rail3.listOfPointsRail[positionOfVector].transform.position.y);
+                positionInRail = new Vector2(board.rail3.listOfPointsRail[positionOfVector].transform.position.x, board.rail3.listOfPointsRail[positionOfVector].transform.position.y);
                 break;
             case 4:
-                positionRail = new Vector2(board.rail4.listOfPointsRail[positionOfVector].transform.position.x, board.rail4.listOfPointsRail[positionOfVector].transform.position.y);
+                positionInRail = new Vector2(board.rail4.listOfPointsRail[positionOfVector].transform.position.x, board.rail4.listOfPointsRail[positionOfVector].transform.position.y);
                 break;
         }
-        return positionRail;
+        return positionInRail;
     }
 
 

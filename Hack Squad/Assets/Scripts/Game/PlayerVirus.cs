@@ -7,7 +7,8 @@ using UnityEngine;
 /// </summary>
 public class PlayerVirus : Player {
 
-    
+    public TypeOfVirus typeOfVirus;
+
     [Range(0, 9, order = 0)]
     public int initialPosition;
 
@@ -20,6 +21,10 @@ public class PlayerVirus : Player {
     [Range(1,4,order = 0)]
     public int railSelected;
     
+    public enum TypeOfVirus{
+        String, Double, Integer, Bool
+    }
+
     void Start()
     {
         playerType = enumPlayerTypes.Virus;

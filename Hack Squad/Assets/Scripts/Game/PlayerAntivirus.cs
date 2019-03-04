@@ -8,6 +8,8 @@ using UnityEngine;
 public class PlayerAntivirus : Player
 {
 
+    
+
     public int conditionalPosition;
 
     public bool axisConditionX;
@@ -19,7 +21,7 @@ public class PlayerAntivirus : Player
     public int initialPositionInRail;
 
     public enumDirections[] arrayDirections;
-
+ 
 
     // Use this for initialization
     void Start()
@@ -32,6 +34,7 @@ public class PlayerAntivirus : Player
     {
 
     }
+
 
     /// <summary>
     /// Variables de tipo enum, que definen los movimientos del personaje Antivirus

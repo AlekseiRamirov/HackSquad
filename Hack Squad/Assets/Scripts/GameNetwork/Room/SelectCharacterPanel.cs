@@ -72,14 +72,19 @@ public class SelectCharacterPanel : Photon.PunBehaviour
             PhotonNetwork.LoadLevel(1);
         }
     }
-    void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
+    
+        Debug.Log("OnPhotonSerializeView " + stream.isWriting);
+
         if (stream.isWriting)
         {
+            Debug.Log("Send Next " + count);
             stream.SendNext(count);
         }
         else
         {
+            Debug.Log("ID" + PhotonNetwork.player.NickName + "count " + count);
             count = (int)stream.ReceiveNext();
         }
     }

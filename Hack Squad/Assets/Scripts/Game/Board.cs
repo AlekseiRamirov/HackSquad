@@ -74,24 +74,7 @@ public class Board : MonoBehaviour
         int cont = 0;
         for (int i = 0; i < 10; i++)
         {
-            //listOfCards[cont].transform.position = Vector2.MoveTowards(listOfCards[i].transform.position, rail1.listOfPointsRail[i].transform.position, Time.deltaTime * 1.5f);
-            //cont++;
-            //listOfCards[cont].transform.position = Vector2.MoveTowards(listOfCards[i].transform.position, rail2.listOfPointsRail[i].transform.position, Time.deltaTime * 1.5f);
-            //cont++;
-            //listOfCards[cont].transform.position = Vector2.MoveTowards(listOfCards[i].transform.position, rail3.listOfPointsRail[i].transform.position, Time.deltaTime * 1.5f);
-            //cont++;
-            //listOfCards[cont].transform.position = Vector2.MoveTowards(listOfCards[i].transform.position, rail4.listOfPointsRail[i].transform.position, Time.deltaTime * 1.5f);
-            //cont++;
 
-            //listOfCards[cont].transform.Translate(rail1.listOfPointsRail[i].transform.position.x * Time.deltaTime, rail1.listOfPointsRail[i].transform.position.y * Time.deltaTime, 0);
-            //cont++;
-            //listOfCards[cont].transform.Translate(rail2.listOfPointsRail[i].transform.position.x * Time.deltaTime, rail2.listOfPointsRail[i].transform.position.y * Time.deltaTime, 0);
-            //cont++;
-            //listOfCards[cont].transform.Translate(rail3.listOfPointsRail[i].transform.position.x * Time.deltaTime, rail3.listOfPointsRail[i].transform.position.y * Time.deltaTime, 0);
-            //cont++;
-            //listOfCards[cont].transform.Translate(rail4.listOfPointsRail[i].transform.position.x * Time.deltaTime, rail4.listOfPointsRail[i].transform.position.y * Time.deltaTime, 0);
-            //cont++;
-            // Cada carta se ordena en forma vertical en los 4 vectores que simulan los carriles de juego
             listOfCards[cont].transform.position = new Vector3(rail1.listOfPointsRail[i].transform.position.x, rail1.listOfPointsRail[i].transform.position.y);
             cont++;
             listOfCards[cont].transform.position = new Vector3(rail2.listOfPointsRail[i].transform.position.x, rail2.listOfPointsRail[i].transform.position.y);
